@@ -1,7 +1,7 @@
 <?php
 
 require_once "Vehicle.php";
-class Camion extends Vehicle
+class Truck extends Vehicle
 {
     /** stockage capacity
      * @var int
@@ -16,7 +16,7 @@ class Camion extends Vehicle
 
     public function __construct(string $color, int $nbSeats, string $energy, int $stockage)
     {
-        parent::__construct($color,$nbSeats);
+        parent::__construct($color, $nbSeats);
         $this->setEnergy($energy);
         $this->setStockage($stockage);
     }
@@ -24,29 +24,36 @@ class Camion extends Vehicle
     /**
      * @return int
      */
-    public function getStockage(){
+    public function getStockage()
+    {
         return $this->stockage;
     }
-    public function setStockage($stockage){
+
+    public function setStockage($stockage)
+    {
         $this->stockage = $stockage;
     }
+
     /**
      * @return int
      */
-    public function getChargementLevel(){
+    public function getChargementLevel()
+    {
         return $this->$chargementLevel;
     }
-    public function setChargementLevel($chargementLevel){
+
+    public function setChargementLevel($chargementLevel)
+    {
         $this->chargementLevel = $chargementLevel;
     }
 
 
     public function isFull()
     {
-            if($this->chargementLevel < 15){
-                return "in filling";
-            }else {
-                return "full";
-            }
+        if ($this->chargementLevel < 15) {
+            return "in filling";
+        } else {
+            return "full";
+        }
     }
 }

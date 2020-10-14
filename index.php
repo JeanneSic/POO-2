@@ -1,7 +1,7 @@
 <?php
 require_once 'Bicycle.php';
 require_once 'Car.php';
-require_once 'Camion.php';
+require_once 'Truck.php';
 require_once 'Vehicle.php';
 
 $bike = new Bicycle("Blue", 1);
@@ -31,7 +31,7 @@ echo $polo->brake();
 echo '<br> La vitesse de la voiture est de : ' . $polo->getCurrentSpeed() . ' km/h' . '<br>';
 
 
-$camion = new Camion('white', 3, "fuel", 15);
+$camion = new Truck('white', 3, "fuel", 15);
 var_dump($camion);
 
 $camion->setEnergyLevel(100);
